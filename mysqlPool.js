@@ -7,8 +7,8 @@ module.exports = function (sql) {
         // 一、创建连接
         var connection = mysql.createConnection({
             host:'127.0.0.1',
-            user:'user',
-            password:'123456',
+            user:'root',
+            password:'root',
             port:3306,
             database:'test'
         });

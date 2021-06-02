@@ -30,7 +30,8 @@ app.get('/messageList', function (req, res, next) {
     console.log(req.params)
     var num = req.query.num;
     var page = req.query.page;
-    var sql = `select * from ${tableName} order by id desc limit ${num * page},${num}`
+    var sqlTest = `select * from ${tableName} order by id desc limit ${num * page},${num}`
+    var sql = `select * from message order by id desc`
     mysqlPool(sql)
         .then((data) => {
             res.send(data);
